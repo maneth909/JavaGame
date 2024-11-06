@@ -4,30 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b677a10-46bb-4857-9847-9f011ba82a23" name="Changes" comment="update1">
-      <change afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/CollisionChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/maps/map01.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/maps/world01.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/player/boy_down_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/player/boy_down_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/player/boy_left_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/player/boy_left_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/player/boy_right_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/player/boy_right_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/player/boy_up_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/player/boy_up_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/tiles/earth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/tiles/grass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/tiles/sand.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/tiles/tree.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/tiles/wall.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/tiles/water.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tile/Tile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
+    <list default="true" id="0b677a10-46bb-4857-9847-9f011ba82a23" name="Changes" comment="Collision">
+      <change afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Sound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Boots.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Chest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Door.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Key.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/objects/boots.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/objects/chest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/objects/door.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/objects/key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/sound/BlueBoyAdventure.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/sound/coin.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/sound/fanfare.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/sound/powerup.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/sound/unlock.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/CollisionChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
@@ -88,6 +86,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Manet\oh\Java\JavaGame\src\res\sound" />
+      <recent name="C:\Users\Manet\oh\Java\JavaGame\src\res\objects" />
       <recent name="C:\Users\Manet\oh\Java\JavaGame\src\res\maps" />
       <recent name="C:\Users\Manet\oh\Java\JavaGame\src\res\tiles" />
       <recent name="C:\Users\Manet\oh\Java\JavaGame\src\res\player" />
@@ -118,12 +118,21 @@
       <option name="project" value="LOCAL" />
       <updated>1729607044744</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Collision">
+      <option name="closed" value="true" />
+      <created>1730363377782</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730363377782</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tesing" />
     <MESSAGE value="update1" />
-    <option name="LAST_COMMIT_MESSAGE" value="update1" />
+    <MESSAGE value="Collision" />
+    <option name="LAST_COMMIT_MESSAGE" value="Collision" />
   </component>
 </project>
