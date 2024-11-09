@@ -33,6 +33,7 @@ public class GamePanel extends JPanel implements Runnable{
     Sound se = new Sound();
     public CollisionChecker cChecker = new CollisionChecker(this);
     public AssetSetter aSetter = new AssetSetter(this);
+    public UI ui = new UI(this);
     Thread gameThread;
 
     //Entiity and object
@@ -96,18 +97,29 @@ public class GamePanel extends JPanel implements Runnable{
 
     public void paintComponent(Graphics g){
         super.paintComponent(g);
-
         Graphics2D g2 = (Graphics2D)g;
 
-        tileM.draw(g2);
+        long drawStart = 0;
+        if (keyH.checkDrawTime == true){
+            drawStart = System.nanoTime();
+        }
 
+        tileM.draw(g2);
         for (int i = 0; i<obj.length; i++){
             if (obj[i] != null){
                 obj[i].draw(g2, this);
             }
         }
-
         player.draw(g2);
+        ui.draw(g2);
+
+        if (keyH.checkDrawTime == true){
+            long drawEnd = System.nanoTime();
+            long passed = drawEnd - drawStart;
+            g2.setColor(Color.white);
+            g2.drawString("Draw Time: "+passed, 10, 400);
+            System.out.println("Draw Time: "+passed);
+        }
 
         g2.dispose();
     }

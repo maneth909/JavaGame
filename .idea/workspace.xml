@@ -4,30 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b677a10-46bb-4857-9847-9f011ba82a23" name="Changes" comment="Collision">
-      <change afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Sound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Boots.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Chest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Door.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Key.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/objects/boots.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/objects/chest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/objects/door.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/objects/key.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/sound/BlueBoyAdventure.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/sound/coin.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/sound/fanfare.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/sound/powerup.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/sound/unlock.wav" afterDir="false" />
+    <list default="true" id="0b677a10-46bb-4857-9847-9f011ba82a23" name="Changes" comment="Object and sound">
+      <change afterPath="$PROJECT_DIR$/src/main/UtilityTool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/CollisionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Boots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Boots.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Chest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Chest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Door.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/SuperObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/maps/map01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/maps/map01.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/maps/world01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/maps/world01.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/objects/boots.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/objects/boots.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/objects/chest.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/objects/chest.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/objects/door.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/objects/door.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/objects/key.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/objects/key.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/player/boy_down_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/boy_down_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/player/boy_down_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/boy_down_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/player/boy_left_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/boy_left_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/player/boy_left_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/boy_left_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/player/boy_right_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/boy_right_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/player/boy_right_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/boy_right_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/player/boy_up_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/boy_up_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/player/boy_up_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/boy_up_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/sound/BlueBoyAdventure.wav" beforeDir="false" afterPath="$PROJECT_DIR$/res/sound/BlueBoyAdventure.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/sound/coin.wav" beforeDir="false" afterPath="$PROJECT_DIR$/res/sound/coin.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/sound/fanfare.wav" beforeDir="false" afterPath="$PROJECT_DIR$/res/sound/fanfare.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/sound/powerup.wav" beforeDir="false" afterPath="$PROJECT_DIR$/res/sound/powerup.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/sound/unlock.wav" beforeDir="false" afterPath="$PROJECT_DIR$/res/sound/unlock.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/tiles/earth.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/tiles/earth.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/tiles/grass.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/tiles/grass.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/tiles/sand.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/tiles/sand.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/tiles/tree.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/tiles/tree.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/tiles/wall.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/tiles/wall.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/tiles/water.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/tiles/water.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,31 +81,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Manet/oh/Java/JavaGame/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/Manet/oh/Java/JavaGame/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JAVA&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Manet\oh\Java\JavaGame" />
       <recent name="C:\Users\Manet\oh\Java\JavaGame\src\res\sound" />
       <recent name="C:\Users\Manet\oh\Java\JavaGame\src\res\objects" />
       <recent name="C:\Users\Manet\oh\Java\JavaGame\src\res\maps" />
       <recent name="C:\Users\Manet\oh\Java\JavaGame\src\res\tiles" />
-      <recent name="C:\Users\Manet\oh\Java\JavaGame\src\res\player" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -126,13 +142,22 @@
       <option name="project" value="LOCAL" />
       <updated>1730363377782</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Object and sound">
+      <option name="closed" value="true" />
+      <created>1730905505816</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730905505816</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tesing" />
     <MESSAGE value="update1" />
     <MESSAGE value="Collision" />
-    <option name="LAST_COMMIT_MESSAGE" value="Collision" />
+    <MESSAGE value="Object and sound" />
+    <option name="LAST_COMMIT_MESSAGE" value="Object and sound" />
   </component>
 </project>
