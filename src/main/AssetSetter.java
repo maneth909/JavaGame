@@ -5,6 +5,7 @@ import object.OBJ_Boots;
 import object.OBJ_Chest;
 import object.OBJ_Door;
 import object.OBJ_Key;
+import tile_interactive.IT_DryTree;
 
 public class AssetSetter {
 
@@ -54,6 +55,43 @@ public class AssetSetter {
         gp.npc[0].worldX = gp.tileSize*21;
         gp.npc[0].worldY = gp.tileSize*21;
 
+        gp.npc[1] = new NPC_OldMan(gp);
+        gp.npc[1].worldX = gp.tileSize*11;
+        gp.npc[1].worldY = gp.tileSize*21;
+
+        gp.npc[2] = new NPC_OldMan(gp);
+        gp.npc[2].worldX = gp.tileSize*31;
+        gp.npc[2].worldY = gp.tileSize*21;
+
+        gp.npc[3] = new NPC_OldMan(gp);
+        gp.npc[3].worldX = gp.tileSize*21;
+        gp.npc[3].worldY = gp.tileSize*11;
+
+        gp.npc[4] = new NPC_OldMan(gp);
+        gp.npc[4].worldX = gp.tileSize*21;
+        gp.npc[4].worldY = gp.tileSize*31;
+
+    }
+
+    public void setInteractiveTile(){
+        int i = 0;
+        gp.iTile[i]= new IT_DryTree(gp, 27,12);i++;
+        gp.iTile[i]= new IT_DryTree(gp,28,12);i++;
+        gp.iTile[i]= new IT_DryTree(gp,29,12);i++;
+        gp.iTile[i]= new IT_DryTree(gp,30,12);i++;
+        gp.iTile[i]= new IT_DryTree(gp, 31, 12);i++;
+        gp.iTile[i]= new IT_DryTree(gp,32,12);i++;
+        gp.iTile[i]= new IT_DryTree(gp,33,12);i++;
+
+        gp.iTile[i]= new IT_DryTree(gp, 30,20);i++;
+        gp.iTile[i]= new IT_DryTree(gp,30,21);i++;
+        gp.iTile[i]= new IT_DryTree(gp,30,22);i++;
+        gp.iTile[i]= new IT_DryTree(gp,20,20);i++;
+        gp.iTile[i]= new IT_DryTree(gp, 20, 21);i++;
+        gp.iTile[i]= new IT_DryTree(gp,20,22);i++;
+        gp.iTile[i]= new IT_DryTree(gp,22,24);i++;
+        gp.iTile[i]= new IT_DryTree(gp,23,24);i++;
+        gp.iTile[i]= new IT_DryTree(gp,24,24);i++;
     }
 
 }

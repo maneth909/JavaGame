@@ -37,8 +37,12 @@ public class Player extends Entity{
         solidArea.width = 32;
         solidArea.height = 32;
 
+        axeArea.width = 36;
+        axeArea.height = 36;
+
         setDefaultValues();
         getPlayerImage();
+        getPlayerAxeImage();
 
     }
     public void setDefaultValues(){
@@ -49,20 +53,33 @@ public class Player extends Entity{
     }
 
     public void getPlayerImage(){
-        up1 = setup("/player/boy_up_1");
-        up2 = setup("/player/boy_up_2");
-        down1 = setup("/player/boy_down_1");
-        down2 = setup("/player/boy_down_2");
-        left1 = setup("/player/boy_left_1");
-        left2 = setup("/player/boy_left_2");
-        right1 = setup("/player/boy_right_1");
-        right2 = setup("/player/boy_right_2");
+        up1 = setup("/player/boy_up_1", gp.tileSize, gp.tileSize);
+        up2 = setup("/player/boy_up_2",gp.tileSize, gp.tileSize);
+        down1 = setup("/player/boy_down_1",gp.tileSize, gp.tileSize);
+        down2 = setup("/player/boy_down_2",gp.tileSize, gp.tileSize);
+        left1 = setup("/player/boy_left_1",gp.tileSize, gp.tileSize);
+        left2 = setup("/player/boy_left_2",gp.tileSize, gp.tileSize);
+        right1 = setup("/player/boy_right_1",gp.tileSize, gp.tileSize);
+        right2 = setup("/player/boy_right_2",gp.tileSize, gp.tileSize);
     }
 
+    public void getPlayerAxeImage(){
+        axeUp1 = setup("/player/boy_axe_up_1",gp.tileSize, gp.tileSize*2);
+        axeUp2 = setup("/player/boy_axe_up_2",gp.tileSize, gp.tileSize*2);
+        axeDown1 = setup("/player/boy_axe_down_1",gp.tileSize, gp.tileSize*2);
+        axeDown2 = setup("/player/boy_axe_down_2",gp.tileSize, gp.tileSize*2);
+        axeLeft1 = setup("/player/boy_axe_left_1",gp.tileSize*2, gp.tileSize);
+        axeLeft2 = setup("/player/boy_axe_left_2",gp.tileSize*2, gp.tileSize);
+        axeRight1 = setup("/player/boy_axe_right_1",gp.tileSize*2, gp.tileSize);
+        axeRight2 = setup("/player/boy_axe_right_2",gp.tileSize*2, gp.tileSize);
+    }
 
     public void update(){
 
-        if(keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed){
+        if(axing == true){
+            axing();
+        }
+        else if(keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed || keyH.enterPressed){
             if(keyH.upPressed){
                 direction = "up";
             }
@@ -87,8 +104,10 @@ public class Player extends Entity{
             int npcIndex = gp.cChecker.checkEntity(this, gp.npc);
             interactNPC(npcIndex);
 
+            int iTileIndex = gp.cChecker.checkEntity(this, gp.iTile);
+
             // if collision is false, player can move
-            if(collisionOn == false){
+            if(collisionOn == false && keyH.enterPressed == false){
                 switch(direction){
                     case "up":
                         worldY -= speed;
@@ -104,6 +123,8 @@ public class Player extends Entity{
                         break;
                 }
             }
+
+            gp.keyH.enterPressed = false;
 
             spriteCounter++;
             if(spriteCounter>12){
@@ -124,6 +145,54 @@ public class Player extends Entity{
             }
         }
 
+    }
+
+    public void axing(){
+        spriteCounter++;
+        if (spriteCounter <= 5){
+            spriteNum = 1;
+        }
+        if(spriteCounter >5 && spriteCounter<=25){
+            spriteNum = 2;
+
+            int currentWorldX = worldX;
+            int currentWorldY = worldY;
+            int solidAreaWidth = solidArea.width;
+            int solidAreaHeight = solidArea.height;
+
+            switch(direction){
+                case "up": worldY -= axeArea.height; break;
+                case "down": worldY += axeArea.height; break;
+                case "left": worldX -= axeArea.width; break;
+                case "right": worldX += axeArea.width; break;
+            }
+
+            int iTileIndex = gp.cChecker.checkEntity(this, gp.iTile);
+            damageInteractiveTile(iTileIndex);
+
+            worldX = currentWorldX;
+            worldY = currentWorldY;
+            solidArea.width = axeArea.width;
+            solidArea.height = axeArea.height;
+
+        }
+        if (spriteCounter>25){
+            spriteNum = 1;
+            spriteCounter = 0;
+            axing = false;
+        }
+    }
+
+    public void damageInteractiveTile(int i){
+        if(i != 999 && gp.iTile[i].destructible == true && gp.iTile[i].invincible == false){
+            gp.iTile[i].playSE();
+            gp.iTile[i].life--;
+            gp.iTile[i].invincible = true;
+
+            if(gp.iTile[i].life == 0){
+                gp.iTile[i] = gp.iTile[i].getDestroyedForm();
+            }
+        }
     }
 
     public void pickUpObject(int i){
@@ -167,13 +236,14 @@ public class Player extends Entity{
     }
 
     public void interactNPC(int i){
-        if(i != 999){
-            if (gp.keyH.enterPressed == true){
+        if (gp.keyH.enterPressed){
+            if(i != 999){
                 gp.gameState = gp.dialogueState;
                 gp.npc[i].speak();
+            } else{
+                axing = true;
             }
         }
-        gp.keyH.enterPressed = false;
     }
 
     public void draw(Graphics2D g2){
@@ -181,41 +251,58 @@ public class Player extends Entity{
 //        g2.fillRect(x,y,gp.tileSize,gp.tileSize);
 
         BufferedImage image = null;
+
+        int tempScreenX = screenX;
+        int tempScreenY = screenY;
+
         switch (direction){
             case "up":
-                if (spriteNum==1){
-                    image = up1;
+                if (axing == false){
+                    if (spriteNum==1){image = up1;}
+                    if(spriteNum ==2){image = up2;}
                 }
-                if(spriteNum ==2){
-                    image = up2;
+                if (axing == true){
+                    tempScreenY = screenY - gp.tileSize;
+                    if (spriteNum==1){image = axeUp1;}
+                    if(spriteNum ==2){image = axeUp2;}
                 }
                 break;
+
             case "down":
-                if (spriteNum==1){
-                    image = down1;
+                if (axing == false){
+                    if (spriteNum==1){image = down1;}
+                    if(spriteNum ==2){image = down2;}
                 }
-                if(spriteNum ==2){
-                    image = down2;
+                if (axing == true){
+                    if (spriteNum==1){image = axeDown1;}
+                    if(spriteNum ==2){image = axeDown2;}
                 }
                 break;
+
             case "left":
-                if (spriteNum==1){
-                    image = left1;
+                if (axing == false){
+                    if (spriteNum==1){image = left1;}
+                    if(spriteNum ==2){image = left2;}
                 }
-                if(spriteNum ==2){
-                    image = left2;
+                if (axing == true){
+                    tempScreenX = screenX - gp.tileSize;
+                    if (spriteNum==1){image = axeLeft1;}
+                    if(spriteNum ==2){image = axeLeft2;}
                 }
                 break;
+
             case "right":
-                if (spriteNum==1){
-                    image = right1;
+                if (axing == false){
+                    if (spriteNum==1){image = right1;}
+                    if(spriteNum ==2){image = right2;}
                 }
-                if(spriteNum ==2){
-                    image = right2;
+                if (axing == true){
+                    if (spriteNum==1){image = axeRight1;}
+                    if(spriteNum ==2){image = axeRight2;}
                 }
                 break;
         }
-        g2.drawImage(image,screenX,screenY,null);
+        g2.drawImage(image,tempScreenX,tempScreenY,null);
 //        g2.drawRect(screenX+solidArea.x,screenY+solidArea.y,solidArea.width,solidArea.height);
 
     }
