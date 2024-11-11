@@ -4,63 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b677a10-46bb-4857-9847-9f011ba82a23" name="Changes" comment="improve rendering performance">
-      <change afterPath="$PROJECT_DIR$/res/NPC/oldman_down_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/NPC/oldman_down_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/NPC/oldman_left_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/NPC/oldman_left_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/NPC/oldman_right_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/NPC/oldman_right_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/NPC/oldman_up_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/NPC/oldman_up_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/maps/worldV2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/floor01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/grass00.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/grass01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/hut.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/road00.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/road01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/road02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/road03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/road04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/road05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/road06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/road07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/road08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/road09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/road10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/road11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/road12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/table01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/water00.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/water01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/water02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/water03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/water04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/water05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/water06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/water07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/water08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/water09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/water11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/water12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/water13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/NPC_OldMan.java" afterDir="false" />
+    <list default="true" id="0b677a10-46bb-4857-9847-9f011ba82a23" name="Changes" comment="NPC">
+      <change afterPath="$PROJECT_DIR$/res/font/Purisa Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/font/x12y16pxMaruMonica.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/earth.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/tiles/earth.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/grass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/sand.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/tiles/water10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/tree.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/tiles/tree.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/wall.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/tiles/wall.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/water.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/NPC_OldMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/NPC_OldMan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/CollisionChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,11 +73,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Manet\oh\Java\JavaGame\res\font" />
       <recent name="C:\Users\Manet\oh\Java\JavaGame\res\NPC" />
       <recent name="C:\Users\Manet\oh\Java\JavaGame\res\tiles" />
       <recent name="C:\Users\Manet\oh\Java\JavaGame\res\maps" />
       <recent name="C:\Users\Manet\oh\Java\JavaGame" />
-      <recent name="C:\Users\Manet\oh\Java\JavaGame\src\res\sound" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -176,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731133858426</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="NPC">
+      <option name="closed" value="true" />
+      <created>1731250773222</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731250773222</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -185,6 +146,7 @@
     <MESSAGE value="Collision" />
     <MESSAGE value="Object and sound" />
     <MESSAGE value="improve rendering performance" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve rendering performance" />
+    <MESSAGE value="NPC" />
+    <option name="LAST_COMMIT_MESSAGE" value="NPC" />
   </component>
 </project>
