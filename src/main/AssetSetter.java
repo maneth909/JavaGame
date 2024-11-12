@@ -50,28 +50,58 @@ public class AssetSetter {
 //        gp.obj[7].worldX= 37* gp.tileSize;
 //        gp.obj[7].worldY = 42*gp.tileSize;
     }
-    public void setNPC(){
+    public void setNPC() {
         gp.npc[0] = new NPC_OldMan(gp);
-        gp.npc[0].worldX = gp.tileSize*21;
-        gp.npc[0].worldY = gp.tileSize*21;
+        gp.npc[0].worldX = gp.tileSize * 21;
+        gp.npc[0].worldY = gp.tileSize * 21;
+        gp.npc[0].setDialogues(new String[]{
+                "Hello, traveler!",
+                "This town is full of mysteries.",
+                "Stay safe on your journey.",
+                "Don't forget to check the old ruins."
+        });
 
         gp.npc[1] = new NPC_OldMan(gp);
-        gp.npc[1].worldX = gp.tileSize*11;
-        gp.npc[1].worldY = gp.tileSize*21;
+        gp.npc[1].worldX = gp.tileSize * 11;
+        gp.npc[1].worldY = gp.tileSize * 21;
+        gp.npc[1].setDialogues(new String[]{
+                "Have you heard about the golden key?",
+                "Legends say it unlocks hidden treasures.",
+                "Some say it's hidden deep in the forest.",
+                "Good luck finding it!"
+        });
 
         gp.npc[2] = new NPC_OldMan(gp);
-        gp.npc[2].worldX = gp.tileSize*31;
-        gp.npc[2].worldY = gp.tileSize*21;
+        gp.npc[2].worldX = gp.tileSize * 31;
+        gp.npc[2].worldY = gp.tileSize * 21;
+        gp.npc[2].setDialogues(new String[]{
+                "The weather is nice today, isn't it?",
+                "Many travelers come through here.",
+                "Be cautious of the wild beasts at night.",
+                "May fortune favor you."
+        });
 
         gp.npc[3] = new NPC_OldMan(gp);
-        gp.npc[3].worldX = gp.tileSize*21;
-        gp.npc[3].worldY = gp.tileSize*11;
+        gp.npc[3].worldX = gp.tileSize * 21;
+        gp.npc[3].worldY = gp.tileSize * 11;
+        gp.npc[3].setDialogues(new String[]{
+                "I used to be an adventurer like you...",
+                "Until I took an arrow to the knee.",
+                "Now, I enjoy telling stories to travelers.",
+                "Want to hear another tale?"
+        });
 
         gp.npc[4] = new NPC_OldMan(gp);
-        gp.npc[4].worldX = gp.tileSize*21;
-        gp.npc[4].worldY = gp.tileSize*31;
-
+        gp.npc[4].worldX = gp.tileSize * 21;
+        gp.npc[4].worldY = gp.tileSize * 31;
+        gp.npc[4].setDialogues(new String[]{
+                "There are many secrets in this world.",
+                "Keep an eye out for hidden paths.",
+                "Listen to the wind; it carries whispers.",
+                "Your destiny awaits."
+        });
     }
+
 
     public void setInteractiveTile(){
         int i = 0;

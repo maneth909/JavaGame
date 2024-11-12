@@ -50,24 +50,47 @@ public class Entity {
     }
 
     public void setAction () {}
-    public void speak(){
-        if (dialogues[dialogueIndex] == null){
+
+    public void speak() {
+        // Loop until we find a non-null dialogue or wrap around to the beginning
+        while (dialogueIndex < dialogues.length && dialogues[dialogueIndex] == null) {
+            dialogueIndex++;
+        }
+
+        // If the dialogueIndex reaches the end or exceeds the array length, reset it
+        if (dialogueIndex >= dialogues.length) {
             dialogueIndex = 0;
         }
-        gp.ui.currentDialogue = dialogues[dialogueIndex];
-        dialogueIndex ++;
 
-        switch(gp.player.direction){
+        // Display the current dialogue if it's not null
+        if (dialogues[dialogueIndex] != null) {
+            gp.ui.currentDialogue = dialogues[dialogueIndex];
+            dialogueIndex++;
+        }
+
+        // Ensure dialogueIndex wraps around correctly if it reaches the end
+        if (dialogueIndex >= dialogues.length) {
+            dialogueIndex = 0;
+        }
+
+        // Adjust direction for interaction feedback
+        switch (gp.player.direction) {
             case "up":
                 direction = "down";
+                break;
             case "down":
                 direction = "up";
+                break;
             case "left":
                 direction = "right";
+                break;
             case "right":
                 direction = "left";
+                break;
         }
     }
+
+
     public void update() {
         setAction();
 
@@ -111,6 +134,10 @@ public class Entity {
                 invincibleCounter = 0;
             }
         }
+    }
+
+    public void setDialogues(String[] dialogues) {
+        this.dialogues = dialogues;
     }
 
 
