@@ -28,6 +28,10 @@ public class GamePanel extends JPanel implements Runnable{
     public final int maxWorldCol = 50;
     public final int maxWorldRow = 50;
 
+    public int endGameDelayCounter = 0; // Add this to track delay time
+    public final int endGameDelayLimit = 80; // Adjust as needed (0.5 sec at 60 FPS)
+
+
     //FPS
     int FPS = 60;
 
@@ -52,7 +56,7 @@ public class GamePanel extends JPanel implements Runnable{
     public final int playState = 1;
     public final int pauseState = 2;
     public final int dialogueState = 3;
-
+    public final int finishState = 4;
 
     public GamePanel(){
         this.setPreferredSize(new Dimension(screenWidth,screenHeight));
@@ -106,90 +110,82 @@ public class GamePanel extends JPanel implements Runnable{
         }
     }
 
-    public void update(){
-
-        if (gameState == playState){
+    public void update() {
+        if (gameState == playState) {
             player.update();
+            ui.updatePlayTime();
 
-            for (int i = 0; i<npc.length; i++){
-                if (npc[i] != null){
+            for (int i = 0; i < npc.length; i++) {
+                if (npc[i] != null) {
                     npc[i].update();
                 }
             }
-            for (int i = 0; i<iTile.length; i++){
-                if (iTile[i] != null){
+            for (int i = 0; i < iTile.length; i++) {
+                if (iTile[i] != null) {
                     iTile[i].update();
                 }
             }
+        } else if (gameState == finishState) {
+            // Increment the delay counter
+            endGameDelayCounter++;
+            if (endGameDelayCounter > endGameDelayLimit) {
+                gameThread = null; // Stop the game thread after the delay
+            }
         }
-        if (gameState == pauseState){
 
+        if (gameState == pauseState) {
+            // Handle pause state updates if needed
         }
     }
 
-    public void paintComponent(Graphics g){
-        super.paintComponent(g);
-        Graphics2D g2 = (Graphics2D)g;
 
-        long drawStart = 0;
-        if (keyH.checkDrawTime == true){
-            drawStart = System.nanoTime();
-        }
-        // title screen
-        if (gameState == titleState){
+
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        Graphics2D g2 = (Graphics2D) g;
+
+        if (gameState == titleState) {
             ui.draw(g2);
-        } else{
+        } else {
             tileM.draw(g2);
 
-            // interactive tile
-            for (int i = 0; i<iTile.length; i++){
-                if (iTile[i] != null){
-                    iTile[i].draw(g2);
+            for (InteractiveTile tile : iTile) {
+                if (tile != null) {
+                    tile.draw(g2);
                 }
             }
 
             entityList.add(player);
-            // add entity to the list
-            for (int i = 0; i<npc.length; i++){
-                if (npc[i] != null){
-                    entityList.add(npc[i]);
+            for (Entity npcEntity : npc) {
+                if (npcEntity != null) {
+                    entityList.add(npcEntity);
                 }
             }
-            for (int i =0; i<obj.length;i++){
-                if(obj[i] != null){
-                    entityList.add(obj[i]);
+            for (Entity object : obj) {
+                if (object != null) {
+                    entityList.add(object);
                 }
             }
 
-            // Sort
-            Collections.sort(entityList, new Comparator<Entity>() {
-                @Override
-                public int compare(Entity e1, Entity e2) {
-                    int result = Integer.compare(e1.worldY, e2.worldY);
-                    return result;
-                }
-            });
-            // draw entity
-            for (int i = 0; i<entityList.size();i++){
-                entityList.get(i).draw(g2);
+            Collections.sort(entityList, Comparator.comparingInt(e -> e.worldY));
+            for (Entity entity : entityList) {
+                entity.draw(g2);
             }
-            // Empty entity list
             entityList.clear();
 
-            // UI
             ui.draw(g2);
-        }
 
-        if (keyH.checkDrawTime == true){
-            long drawEnd = System.nanoTime();
-            long passed = drawEnd - drawStart;
-            g2.setColor(Color.white);
-            g2.drawString("Draw Time: "+passed, 10, 400);
-            System.out.println("Draw Time: "+passed);
+            // Draw the congratulatory message on top of the last frame
+            if (gameState == finishState) {
+                ui.showCongratulatoryMessage(g2);
+            }
         }
 
         g2.dispose();
     }
+
+
+
 
     public void playMusic(int i){
         music.setFile(i);

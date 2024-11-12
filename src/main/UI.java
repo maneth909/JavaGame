@@ -21,6 +21,8 @@ public class UI {
     public String currentDialogue = "";
     public int commandNum = 0;
 
+    public boolean showCongratMessage = false;
+
     double playTime;
     DecimalFormat dFormat = new DecimalFormat("#0.00");
 
@@ -45,60 +47,48 @@ public class UI {
         messageOn = true;
     }
 
-    public void draw(Graphics2D g2){
+    public void foundFinalObj(){
+//        gameFinished = true;
+        gp.gameState = gp.finishState;
+        gp.endGameDelayCounter = 0;
+        gp.stopMusic();
+        gp.playerSE(6);
+    }
 
+    public void draw(Graphics2D g2) {
         this.g2 = g2;
 
         g2.setFont(maruMonica);
         g2.setColor(Color.white);
 
-        if (gp.gameState == gp.titleState){
-            drawTitleScreen();
-        }
-        if (gp.gameState == gp.playState){
+        if (gp.gameState == gp.finishState) {
+            showCongratulatoryMessage(g2);
 
+            gp.gameThread = null;
         }
-        if (gp.gameState == gp.pauseState){
-            drawPauseScreen();
-        }
-        if (gp.gameState == gp.dialogueState){
-            drawDialogueScreen();
+        else {
+            if (gp.gameState == gp.titleState) {
+                drawTitleScreen();
+            }
+            if (gp.gameState == gp.playState) {
+                drawPlayTime(g2);
+                // Draw the game during normal play
+            }
+            if (gp.gameState == gp.pauseState) {
+                drawPauseScreen();
+            }
+            if (gp.gameState == gp.dialogueState) {
+                drawDialogueScreen();
+            }
         }
 
-//        if (gameFinished == true){
-//
-//            g2.setFont(arial_40);
-//            g2.setColor(Color.white);
-//
-//            String text;
-//            int textLength;
-//            int x;
-//            int y;
-//
-//            text = "You found the treasure";
-//            textLength = (int)g2.getFontMetrics().getStringBounds (text, g2).getWidth();
-//            x = gp.screenWidth/2 - textLength/2;
-//            y = gp.screenHeight/2 - (gp.tileSize*3);
-//            g2.drawString(text, x, y);
-//
-//            text = "Time spent: "+dFormat.format(playTime)+"!";
-//            textLength = (int)g2.getFontMetrics().getStringBounds (text, g2).getWidth();
-//            x = gp.screenWidth/2 - textLength/2;
-//            y = gp.screenHeight/2 + (gp.tileSize*4);
-//            g2.drawString(text, x, y);
-//
-//            g2.setFont(arial_80B);
-//            g2.setColor(Color.yellow);
-//            text = "Congratulations";
-//            textLength = (int)g2.getFontMetrics().getStringBounds (text, g2).getWidth();
-//            x = gp.screenWidth/2 - textLength/2;
-//            y = gp.screenHeight/2 + (gp.tileSize*3);
-//            g2.drawString(text, x, y);
-//
-//            gp.gameThread = null;
-//
-//        } else{
-//            g2.setFont(arial_40);
+    }
+
+
+
+//        else{
+////            g2.setFont(arial_40);
+//            g2.setFont(maruMonica);
 //            g2.setColor(Color.white);
 //            g2.drawImage(keyImage, gp.tileSize/2, gp.tileSize/2, gp.tileSize, gp.tileSize, null);
 //            g2.drawString("x "+gp.player.hasKey,74,65);
@@ -119,7 +109,54 @@ public class UI {
 //                }
 //            }
 //        }
+
+    public void showCongratulatoryMessage(Graphics2D g2) {
+        g2.setFont(maruMonica.deriveFont(Font.BOLD, 48F)); // Increase the size as needed
+        g2.setColor(Color.white);
+
+        String text;
+        int textLength;
+        int x;
+        int y;
+
+        // "You found the treasure" message
+        text = "You found the dog";
+        textLength = (int) g2.getFontMetrics().getStringBounds(text, g2).getWidth();
+        x = gp.screenWidth / 2 - textLength / 2;
+        y = gp.screenHeight / 2 - (gp.tileSize * 3);
+        g2.drawString(text, x, y);
+
+        // Time spent message
+        g2.setFont(maruMonica.deriveFont(Font.PLAIN, 36F)); // Slightly smaller font for details
+        text = "Time spent: " + dFormat.format(playTime) + "sec";
+        textLength = (int) g2.getFontMetrics().getStringBounds(text, g2).getWidth();
+        x = gp.screenWidth / 2 - textLength / 2;
+        y = gp.screenHeight / 2 + (gp.tileSize * 4);
+        g2.drawString(text, x, y);
+
+        // "Congratulations" message
+        g2.setFont(maruMonica.deriveFont(Font.BOLD, 48F)); // Increase size for emphasis
+        g2.setColor(Color.yellow);
+        text = "Congratulations";
+        textLength = (int) g2.getFontMetrics().getStringBounds(text, g2).getWidth();
+        x = gp.screenWidth / 2 - textLength / 2;
+        y = gp.screenHeight / 2 + (gp.tileSize * 3);
+        g2.drawString(text, x, y);
     }
+
+    public void updatePlayTime() {
+        if (!gameFinished) {
+            playTime += (double) 1 / 60; // Update time at 60 FPS (or adjust according to your FPS)
+        }
+    }
+
+    public void drawPlayTime(Graphics2D g2) {
+        g2.setFont(maruMonica.deriveFont(Font.PLAIN, 38F));
+        g2.setColor(Color.white);
+        String timeText = "Time: " + dFormat.format(playTime) + "s";
+        g2.drawString(timeText, gp.tileSize, gp.tileSize); // Adjust position as needed
+    }
+
 
     public void drawTitleScreen(){
 

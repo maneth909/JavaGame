@@ -244,6 +244,19 @@ public class Player extends Entity{
                 axing = true;
             }
         }
+//        if (gp.keyH.enterPressed) {
+//            if (i != 999) {
+//                // Check if the NPC is the cat
+//                if (gp.npc[i] != null && gp.npc[i].name.equals("Cat")) {
+//                    gp.ui.foundFinalObj();  // End the game when the cat is touched
+//                } else {
+//                    gp.gameState = gp.dialogueState;
+//                    gp.npc[i].speak();
+//                }
+//            } else {
+//                axing = true;
+//            }
+//        }
     }
 
     public void draw(Graphics2D g2){

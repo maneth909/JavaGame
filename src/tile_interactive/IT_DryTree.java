@@ -19,8 +19,12 @@ public class IT_DryTree extends InteractiveTile{
     public void playSE(){
         gp.playerSE(5);
     }
-    public InteractiveTile getDestroyedForm(){
-        InteractiveTile tile = new IT_Trunk(gp, worldX/gp.tileSize, worldY/gp.tileSize);
-        return tile;
+    public InteractiveTile getDestroyedForm() {
+        // Check if the tree being cut is at column 20 and row 20
+        if (worldX == 20 * gp.tileSize && worldY == 20 * gp.tileSize) {
+            return new TBF_Obj(gp, worldX / gp.tileSize, worldY / gp.tileSize);
+        } else {
+            return new IT_Trunk(gp, worldX / gp.tileSize, worldY / gp.tileSize);
+        }
     }
 }
