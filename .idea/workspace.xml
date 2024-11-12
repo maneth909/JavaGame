@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b677a10-46bb-4857-9847-9f011ba82a23" name="Changes" comment="hide the dog and display congrates text">
+    <list default="true" id="0b677a10-46bb-4857-9847-9f011ba82a23" name="Changes" comment="NPC fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile_interactive/IT_DryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile_interactive/IT_DryTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731407155226</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="NPC fixed">
+      <option name="closed" value="true" />
+      <created>1731408455994</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731408455994</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -176,6 +185,7 @@
     <MESSAGE value="Title Screen" />
     <MESSAGE value="Cut down tree with axe" />
     <MESSAGE value="hide the dog and display congrates text" />
-    <option name="LAST_COMMIT_MESSAGE" value="hide the dog and display congrates text" />
+    <MESSAGE value="NPC fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="NPC fixed" />
   </component>
 </project>

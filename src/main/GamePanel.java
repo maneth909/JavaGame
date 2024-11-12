@@ -180,6 +180,15 @@ public class GamePanel extends JPanel implements Runnable{
                 ui.showCongratulatoryMessage(g2);
             }
         }
+        // Calculate player's column and row position
+        int playerCol = (player.worldX / tileSize)+1;
+        int playerRow = (player.worldY / tileSize)+1;
+
+        // Display the coordinates at the top-left corner (you can adjust the position)
+        g2.setColor(Color.WHITE);  // White color for the text
+        g2.setFont(new Font("Arial", Font.PLAIN, 16));  // Font for the text
+        g2.drawString("Location: (" + playerCol + ", " + playerRow + ")", 600, 70);
+
 
         g2.dispose();
     }

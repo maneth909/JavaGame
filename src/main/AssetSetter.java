@@ -62,8 +62,8 @@ public class AssetSetter {
         });
 
         gp.npc[1] = new NPC_OldMan(gp);
-        gp.npc[1].worldX = gp.tileSize * 11;
-        gp.npc[1].worldY = gp.tileSize * 21;
+        gp.npc[1].worldX = gp.tileSize * 12;
+        gp.npc[1].worldY = gp.tileSize * 31;
         gp.npc[1].setDialogues(new String[]{
                 "Have you heard about the golden key?",
                 "Legends say it unlocks hidden treasures.",
@@ -72,8 +72,8 @@ public class AssetSetter {
         });
 
         gp.npc[2] = new NPC_OldMan(gp);
-        gp.npc[2].worldX = gp.tileSize * 31;
-        gp.npc[2].worldY = gp.tileSize * 21;
+        gp.npc[2].worldX = gp.tileSize * 38;
+        gp.npc[2].worldY = gp.tileSize * 10;
         gp.npc[2].setDialogues(new String[]{
                 "The weather is nice today, isn't it?",
                 "Many travelers come through here.",
@@ -82,8 +82,8 @@ public class AssetSetter {
         });
 
         gp.npc[3] = new NPC_OldMan(gp);
-        gp.npc[3].worldX = gp.tileSize * 21;
-        gp.npc[3].worldY = gp.tileSize * 11;
+        gp.npc[3].worldX = gp.tileSize * 23;
+        gp.npc[3].worldY = gp.tileSize * 39;
         gp.npc[3].setDialogues(new String[]{
                 "I used to be an adventurer like you...",
                 "Until I took an arrow to the knee.",
@@ -92,9 +92,39 @@ public class AssetSetter {
         });
 
         gp.npc[4] = new NPC_OldMan(gp);
-        gp.npc[4].worldX = gp.tileSize * 21;
-        gp.npc[4].worldY = gp.tileSize * 31;
+        gp.npc[4].worldX = gp.tileSize * 36;
+        gp.npc[4].worldY = gp.tileSize * 34;
         gp.npc[4].setDialogues(new String[]{
+                "There are many secrets in this world.",
+                "Keep an eye out for hidden paths.",
+                "Listen to the wind; it carries whispers.",
+                "Your destiny awaits."
+        });
+
+        gp.npc[5] = new NPC_OldMan(gp);
+        gp.npc[5].worldX = gp.tileSize * 13;
+        gp.npc[5].worldY = gp.tileSize * 20;
+        gp.npc[5].setDialogues(new String[]{
+                "There are many secrets in this world.",
+                "Keep an eye out for hidden paths.",
+                "Listen to the wind; it carries whispers.",
+                "Your destiny awaits."
+        });
+
+        gp.npc[6] = new NPC_OldMan(gp);
+        gp.npc[6].worldX = gp.tileSize * 37;
+        gp.npc[6].worldY = gp.tileSize * 20;
+        gp.npc[6].setDialogues(new String[]{
+                "There are many secrets in this world.",
+                "Keep an eye out for hidden paths.",
+                "Listen to the wind; it carries whispers.",
+                "Your destiny awaits."
+        });
+
+        gp.npc[7] = new NPC_OldMan(gp);
+        gp.npc[7].worldX = gp.tileSize * 30;
+        gp.npc[7].worldY = gp.tileSize * 29;
+        gp.npc[7].setDialogues(new String[]{
                 "There are many secrets in this world.",
                 "Keep an eye out for hidden paths.",
                 "Listen to the wind; it carries whispers.",
@@ -113,15 +143,6 @@ public class AssetSetter {
         gp.iTile[i]= new IT_DryTree(gp,32,12);i++;
         gp.iTile[i]= new IT_DryTree(gp,33,12);i++;
 
-        gp.iTile[i]= new IT_DryTree(gp, 30,20);i++;
-        gp.iTile[i]= new IT_DryTree(gp,30,21);i++;
-        gp.iTile[i]= new IT_DryTree(gp,30,22);i++;
-        gp.iTile[i]= new IT_DryTree(gp,20,20);i++;
-        gp.iTile[i]= new IT_DryTree(gp, 20, 21);i++;
-        gp.iTile[i]= new IT_DryTree(gp,20,22);i++;
-        gp.iTile[i]= new IT_DryTree(gp,22,24);i++;
-        gp.iTile[i]= new IT_DryTree(gp,23,24);i++;
-        gp.iTile[i]= new IT_DryTree(gp,24,24);i++;
     }
 
 }

@@ -21,7 +21,7 @@ public class IT_DryTree extends InteractiveTile{
     }
     public InteractiveTile getDestroyedForm() {
         // Check if the tree being cut is at column 20 and row 20
-        if (worldX == 20 * gp.tileSize && worldY == 20 * gp.tileSize) {
+        if (worldX == 30 * gp.tileSize && worldY == 12 * gp.tileSize) {
             return new TBF_Obj(gp, worldX / gp.tileSize, worldY / gp.tileSize);
         } else {
             return new IT_Trunk(gp, worldX / gp.tileSize, worldY / gp.tileSize);
