@@ -66,7 +66,7 @@ public class AssetSetter {
         gp.npc[1].worldY = gp.tileSize * 31;
         gp.npc[1].setDialogues(new String[]{
                 "Hi, I am John.",
-                "Go to (30, 19) coordinator",
+                "Go to (30, 19) coordinates",
                 "Good luck finding it!"
         });
 
