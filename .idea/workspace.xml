@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b677a10-46bb-4857-9847-9f011ba82a23" name="Changes" comment="NPC fixed">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/maps/worldV2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/maps/worldV2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/tiles_interactive/final_obj.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/tiles_interactive/final_obj.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tile_interactive/IT_DryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile_interactive/IT_DryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile_interactive/TBF_Obj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile_interactive/TBF_Obj.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +41,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/maneth909/JavaGame&quot;,
+    &quot;url&quot;: &quot;https://github.com/maneth909/JavaGame.git&quot;,
     &quot;accountId&quot;: &quot;32673516-510e-422a-9eca-e739863475e0&quot;
   }
 }</component>
@@ -51,10 +59,11 @@
   &quot;keyToString&quot;: {
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Manet/oh/Java/JavaGame/src/Main.java&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Manet/Desktop/Game/src/Main.java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -68,12 +77,27 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Manet\Desktop\Game\res\tiles_interactive" />
       <recent name="C:\Users\Manet\oh\Java\JavaGame\res\sound" />
       <recent name="C:\Users\Manet\oh\Java\JavaGame\res\tiles_interactive" />
       <recent name="C:\Users\Manet\oh\Java\JavaGame\res\player" />
       <recent name="C:\Users\Manet\oh\Java\JavaGame\res\font" />
-      <recent name="C:\Users\Manet\oh\Java\JavaGame\res\NPC" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="Game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -187,5 +211,16 @@
     <MESSAGE value="hide the dog and display congrates text" />
     <MESSAGE value="NPC fixed" />
     <option name="LAST_COMMIT_MESSAGE" value="NPC fixed" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

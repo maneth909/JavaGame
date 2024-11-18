@@ -55,19 +55,18 @@ public class AssetSetter {
         gp.npc[0].worldX = gp.tileSize * 21;
         gp.npc[0].worldY = gp.tileSize * 21;
         gp.npc[0].setDialogues(new String[]{
-                "Hello, traveler!",
-                "This town is full of mysteries.",
-                "Stay safe on your journey.",
-                "Don't forget to check the old ruins."
+                "Hello, bro!",
+                "What brings you here?",
+                "I have heard that there is a dog missing",
+                "It should be somewhere near you"
         });
 
         gp.npc[1] = new NPC_OldMan(gp);
         gp.npc[1].worldX = gp.tileSize * 12;
         gp.npc[1].worldY = gp.tileSize * 31;
         gp.npc[1].setDialogues(new String[]{
-                "Have you heard about the golden key?",
-                "Legends say it unlocks hidden treasures.",
-                "Some say it's hidden deep in the forest.",
+                "Hi, I am John.",
+                "Go to (30, 19) coordinator",
                 "Good luck finding it!"
         });
 
@@ -76,45 +75,18 @@ public class AssetSetter {
         gp.npc[2].worldY = gp.tileSize * 10;
         gp.npc[2].setDialogues(new String[]{
                 "The weather is nice today, isn't it?",
-                "Many travelers come through here.",
                 "Be cautious of the wild beasts at night.",
-                "May fortune favor you."
+                "The dog is somewhere near the water"
         });
 
-        gp.npc[3] = new NPC_OldMan(gp);
-        gp.npc[3].worldX = gp.tileSize * 23;
-        gp.npc[3].worldY = gp.tileSize * 39;
-        gp.npc[3].setDialogues(new String[]{
-                "I used to be an adventurer like you...",
-                "Until I took an arrow to the knee.",
-                "Now, I enjoy telling stories to travelers.",
-                "Want to hear another tale?"
-        });
 
-        gp.npc[4] = new NPC_OldMan(gp);
-        gp.npc[4].worldX = gp.tileSize * 36;
-        gp.npc[4].worldY = gp.tileSize * 34;
-        gp.npc[4].setDialogues(new String[]{
-                "There are many secrets in this world.",
-                "Keep an eye out for hidden paths.",
-                "Listen to the wind; it carries whispers.",
-                "Your destiny awaits."
-        });
 
-        gp.npc[5] = new NPC_OldMan(gp);
-        gp.npc[5].worldX = gp.tileSize * 13;
-        gp.npc[5].worldY = gp.tileSize * 20;
-        gp.npc[5].setDialogues(new String[]{
-                "There are many secrets in this world.",
-                "Keep an eye out for hidden paths.",
-                "Listen to the wind; it carries whispers.",
-                "Your destiny awaits."
-        });
 
         gp.npc[6] = new NPC_OldMan(gp);
         gp.npc[6].worldX = gp.tileSize * 37;
         gp.npc[6].worldY = gp.tileSize * 20;
         gp.npc[6].setDialogues(new String[]{
+
                 "There are many secrets in this world.",
                 "Keep an eye out for hidden paths.",
                 "Listen to the wind; it carries whispers.",
@@ -125,9 +97,8 @@ public class AssetSetter {
         gp.npc[7].worldX = gp.tileSize * 30;
         gp.npc[7].worldY = gp.tileSize * 29;
         gp.npc[7].setDialogues(new String[]{
-                "There are many secrets in this world.",
+                "I heard the dog barking somewhere at /n(15,35) ",
                 "Keep an eye out for hidden paths.",
-                "Listen to the wind; it carries whispers.",
                 "Your destiny awaits."
         });
     }
@@ -142,6 +113,36 @@ public class AssetSetter {
         gp.iTile[i]= new IT_DryTree(gp, 31, 12);i++;
         gp.iTile[i]= new IT_DryTree(gp,32,12);i++;
         gp.iTile[i]= new IT_DryTree(gp,33,12);i++;
+
+        gp.iTile[i]= new IT_DryTree(gp, 25,31);i++;
+        gp.iTile[i]= new IT_DryTree(gp,26,31);i++;
+        gp.iTile[i]= new IT_DryTree(gp,27,31);i++;
+        gp.iTile[i]= new IT_DryTree(gp,28,31);i++;
+        gp.iTile[i]= new IT_DryTree(gp, 29, 31);i++;
+        gp.iTile[i]= new IT_DryTree(gp,31,31);i++;
+        gp.iTile[i]= new IT_DryTree(gp,30,31);i++;
+
+        gp.iTile[i]= new IT_DryTree(gp, 21,15);i++;
+        gp.iTile[i]= new IT_DryTree(gp,20,15);i++;
+        gp.iTile[i]= new IT_DryTree(gp,19,15);i++;
+        gp.iTile[i]= new IT_DryTree(gp,18,15);i++;
+        gp.iTile[i]= new IT_DryTree(gp, 17, 15);i++;
+        gp.iTile[i]= new IT_DryTree(gp,16,15);i++;
+
+        gp.iTile[i]= new IT_DryTree(gp, 30,19);i++;
+        gp.iTile[i]= new IT_DryTree(gp,30,18);i++;
+        gp.iTile[i]= new IT_DryTree(gp,30,17);i++;
+
+        gp.iTile[i]= new IT_DryTree(gp, 37,36);i++;
+        gp.iTile[i]= new IT_DryTree(gp,34,34);i++;
+        gp.iTile[i]= new IT_DryTree(gp,32,37);i++;
+
+        gp.iTile[i]= new IT_DryTree(gp, 17,37);i++;
+        gp.iTile[i]= new IT_DryTree(gp,16,37);i++;
+        gp.iTile[i]= new IT_DryTree(gp,15,37);i++;
+        gp.iTile[i]= new IT_DryTree(gp, 14,37);i++;
+        gp.iTile[i]= new IT_DryTree(gp,13,37);i++;
+
 
     }
 

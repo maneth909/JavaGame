@@ -14,7 +14,7 @@ public class TBF_Obj extends InteractiveTile {
         this.worldY = gp.tileSize * row;
 
         // Load the cat image (make sure the path is correct)
-        down1 = setup("/tiles_interactive/final_obj", gp.tileSize, gp.tileSize);
+        down1 = setup("/tiles_interactive/final_obj", 30, 30);
     }
 
     @Override
